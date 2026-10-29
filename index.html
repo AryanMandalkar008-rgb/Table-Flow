@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta name="description" content="Browser-based CSV and PDF converter with editable tables."><title>TableFlow — CSV & PDF Studio</title><link rel="stylesheet" href="style.css"></head>
+<body>
+<header class="topbar"><a class="brand" href="#"><span class="brand-icon">▦</span><span>Table<span class="accent">Flow</span></span></a><div class="top-note"><i></i> Files stay on your device</div><a class="github-link" href="https://github.com/new" target="_blank" rel="noopener">Upload to GitHub ↗</a></header>
+<main><section class="hero"><div class="eyebrow">✦ &nbsp; YOUR DATA, YOUR WORKSPACE</div><h1>Tables in. PDFs out.<br><span>Simple as that.</span></h1><p>Convert CSV files to clean PDFs, turn table PDFs back into CSV, and edit rows and columns — all in your browser, with no database.</p><div class="chips"><span>✓ No sign-up</span><span>✓ No database</span><span>✓ Browser-based</span></div></section>
+<section class="workspace"><aside class="sidebar"><p class="side-label">WORKSPACE</p><button class="nav active" data-mode="csv-pdf">▤ &nbsp; CSV → PDF <b>›</b></button><button class="nav" data-mode="pdf-csv">▧ &nbsp; PDF → CSV <b>›</b></button><button class="nav" data-mode="editor">✎ &nbsp; Table editor <b>›</b></button><div class="tip"><div class="tip-icon">✦</div><strong>Private by design</strong><p>Your selected files are processed locally in this browser. They aren't sent to a server.</p></div><div class="side-footer">TABLEFLOW STUDIO <span>v1.0</span></div></aside>
+<section class="panel"><div class="panel-head"><div><p class="kicker" id="kicker">CONVERT & EXPORT</p><h2 id="mode-title">CSV to PDF</h2><p class="sub" id="mode-desc">Turn spreadsheet data into a print-ready document.</p></div><div class="steps"><span>1</span> Import ─ <span>2</span> Edit ─ <span>3</span> Export</div></div>
+<div class="upload" id="upload"><input type="file" id="file" accept=".csv,text/csv" hidden><div class="upload-icon">↑</div><h3 id="upload-title">Drop your CSV file here</h3><p id="upload-desc">or browse files from your computer</p><button class="primary" id="browse">Choose CSV file <b>↗</b></button><small id="hint">CSV format · Your file stays on this device</small></div>
+<div class="toolbar"><div class="table-title"><i></i><div><strong id="table-name">Untitled table</strong><small id="meta">No file imported yet</small></div></div><div class="actions"><button class="small" id="add-row">＋ Row</button><button class="small" id="add-col">＋ Column</button><button class="small" id="del-row">− Row</button><button class="small" id="del-col">− Column</button></div></div>
+<div class="table-wrap" id="table-wrap"><div class="empty"><div>▦</div><strong>Your table will appear here</strong><p>Import a CSV or load a sample table to start editing.</p><button class="text-button" id="sample">Load sample table →</button></div></div>
+<div class="bottom"><div class="status"><i></i><span id="status">Ready when you are</span></div><div class="exports"><button class="outline" id="export-csv" disabled>↓ Export CSV</button><button class="primary" id="export-pdf" disabled>Export PDF ↗</button></div></div><div class="notice" id="notice" role="status"></div></section></section>
+<section class="how"><p class="kicker">HOW IT WORKS</p><h2>Made for everyday files.</h2><div class="how-grid"><article><span>01</span><h3>Import</h3><p>Choose a CSV file or load a sample table to get started.</p></article><article><span>02</span><h3>Edit in place</h3><p>Click any cell to edit it. Add or remove rows and columns.</p></article><article><span>03</span><h3>Export your way</h3><p>Download a polished PDF or save your table as a CSV.</p></article></div><p class="pdf-note"><b>PDF → CSV note:</b> Text-based PDFs can be extracted approximately. Scanned PDFs need OCR, which isn't included. Complex layouts may need manual correction.</p></section></main>
+<footer><a class="brand foot-brand" href="#"><span class="brand-icon">▦</span>Table<span class="accent">Flow</span></a><span>Useful tools. No accounts. No database.</span><span>© 2026 TableFlow</span></footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"
+  onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js'"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.2/jspdf.umd.min.js"
+  onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/jspdf@2.5.2/dist/jspdf.umd.min.js'"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.4/jspdf.plugin.autotable.min.js"
+  onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/jspdf-autotable@3.8.4/dist/jspdf.plugin.autotable.min.js'"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"
+  onerror="this.onerror=null;this.src='https://cdn.jsdelivr.net/npm/pdfjs-dist@3.11.174/build/pdf.min.js'"></script>
+
+<script src="app.js"></script>
+</body>
+</html>
